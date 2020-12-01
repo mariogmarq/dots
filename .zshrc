@@ -115,6 +115,7 @@ alias upg="sudo apt-get upgrade"
 alias v="nvim"
 alias rn="ranger"
 alias hdd="ranger /media/mario/HDD1"
+alias tmp="cd /tmp/"
 
 plugins=(
   git
