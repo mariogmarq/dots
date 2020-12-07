@@ -1,21 +1,24 @@
+import: 
+  - /home/mario/Documentos/alacritty-master/dracula.yml
+
 font:
   normal:
-    family: Lilex
+    family: fira code
     style: Regular
 
   bold:
-    family: Lilex
+    family: fira code
     style: Bold
 
   italic:
-    family: Lilex
+    family: fira code
     style: Italic
 
   bold_italic:
-    family: Lilex
+    family: fira code
     style: Bold Italic
 
-  size: 11
+  size: 12
 
 window:
   # Window dimensions in character columns and lines

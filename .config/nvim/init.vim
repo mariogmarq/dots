@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 "" Themes
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
@@ -13,13 +14,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'rhysd/vim-clang-format'
 
 "" Tools
-Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'townk/vim-autoclose'
 Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-fugitive'
-Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -29,7 +28,7 @@ set termguicolors
 " let g:tokyonight_enable_italic = 1
 let ayucolor="mirage" " for mirage version of theme
 
-colorscheme ayu
+colorscheme dracula
 " Custom config
 syntax on
 set nu rnu
