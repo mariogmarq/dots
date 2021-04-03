@@ -89,8 +89,8 @@ fi
 
 # some more ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias la='exa -la'
+alias l='exa'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -117,7 +117,15 @@ if ! shopt -oq posix; then
 fi
 
 alias q="exit"
-alias inst="sudo apt-get install"
-alias upt="sudo apt-get update"
-alias upg="sudo apt-get upgrade"
+alias inst="yay -Sy"
+alias upt="yay -Su"
 alias v="nvim"
+alias mhdd="sudo mount /dev/sda1 /media/mario/HDD1"
+alias s="scrot"
+
+export LC_ALL="C"
+source "$HOME/.cargo/env"
+eval "$(starship init bash)"
+
+export PATH=/home/mario/.local/share/gem/ruby/2.7.0/bin:$PATH
+export STEAM_COMPAT_DATA_PATH=$HOME/proton
