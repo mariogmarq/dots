@@ -10,6 +10,7 @@ Plug 'sainnhe/sonokai'
 Plug 'fatih/vim-go'
 Plug 'sheerun/vim-polyglot'
 Plug 'lervag/vimtex'
+Plug 'buoto/gotests-vim'
 
 "" vimtex config
 let g:tex_flavor='latex'
@@ -34,6 +35,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
+
+let g:gotests_bin = '/home/mario/go/bin/gotests'
 
 set guicursor=n-v-c:block-Cursor
 
@@ -77,6 +80,7 @@ nmap <silent> <C-e> <Plug>(coc-definition)
 nmap <silent> <C-t> <Plug>(coc-type-definition)
 nmap <silent> <C-r> <Plug>(coc-refractor)
 nmap <silent> <C-l> <Plug>(coc-openlink)
+nmap <silent> <C-T> :vsplit<CR> :terminal<CR>
 let g:AutoClosePreserveDotReg = 0
 
 

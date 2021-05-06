@@ -129,3 +129,7 @@ eval "$(starship init bash)"
 
 export PATH=/home/mario/.local/share/gem/ruby/2.7.0/bin:$PATH
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
+
+# Stuff for ssg5
+alias generate='rm dst/.files && ssg5 src dst "mariogmarq website"  "https://mariogmarq.github.io"'
+alias website='syncro update && mv dst/* . && mv dst/.files . && rmdir dst/'
