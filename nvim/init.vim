@@ -1,3 +1,5 @@
+lua require('init')
+
 call plug#begin('~/.vim/plugged')
 
 "" Themes
@@ -5,6 +7,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'sainnhe/sonokai'
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 "" Language specific
 Plug 'fatih/vim-go'
@@ -27,12 +31,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'liuchengxu/vim-which-key'
 
-
-" telescope requirements...
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
@@ -42,7 +42,7 @@ set guicursor=n-v-c:block-Cursor
 
 set termguicolors
 
-colorscheme sonokai
+colorscheme palenight
 
 " Custom config
 syntax on
@@ -75,12 +75,23 @@ autocmd BufEnter *.go map <C-s> :GoImports<CR>:GoFmt<CR>:w<CR>
 map <C-a> ggvG$
 map <C-q> "+y
 map ; :NERDTree<CR>
-map <C-SPACE> :FZF<CR>
-nmap <silent> <C-e> <Plug>(coc-definition)
-nmap <silent> <C-t> <Plug>(coc-type-definition)
-nmap <silent> <C-r> <Plug>(coc-refractor)
-nmap <silent> <C-l> <Plug>(coc-openlink)
+nnoremap <silent> <leader> :WhichKey '\'<CR>
+
+" coc
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gr <Plug>(coc-refractor)
+nmap <silent> <leader>gl <Plug>(coc-openlink)
+nmap <silent> <leader>gy <Plug>(coc-type-definition)
+nmap <silent> <leader>gi <Plug>(coc-implementation)
+nmap <silent> <leader>gr <Plug>(coc-references)
 nmap <silent> <C-T> :vsplit<CR> :terminal<CR>
+
+" telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 let g:AutoClosePreserveDotReg = 0
 
 
@@ -142,11 +153,6 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
