@@ -3,10 +3,7 @@ lua require('init')
 call plug#begin('~/.vim/plugged')
 
 "" Themes
-Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
-Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
-Plug 'sainnhe/sonokai'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -33,6 +30,11 @@ Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'liuchengxu/vim-which-key'
 
+Plug 'sirver/UltiSnips'
+		let g:UltiSnipsExpandTrigger       = "<C-L>"
+		let g:UltiSnipsJumpForwardTrigger  = "<C-B>"
+		let g:UltiSnipsJumpBackwardTrigger = "<C-Z>"
+		let g:UltiSnipsEditSplit           = "vertical"
 
 call plug#end()
 
@@ -42,7 +44,7 @@ set guicursor=n-v-c:block-Cursor
 
 set termguicolors
 
-colorscheme palenight
+colorscheme zephyr
 
 " Custom config
 syntax on
@@ -70,12 +72,15 @@ set undolevels=1000
 set backspace=indent,eol,start
 
 " KeyBindings
+let mapleader = " "
 map <C-s> :FormatCode<CR>:w<CR>
 autocmd BufEnter *.go map <C-s> :GoImports<CR>:GoFmt<CR>:w<CR>
+autocmd BufEnter *.go map  t :GoTest<CR>
+autocmd BufEnter *.go map  T :GoAlternate<CR>
 map <C-a> ggvG$
 map <C-q> "+y
 map ; :NERDTree<CR>
-nnoremap <silent> <leader> :WhichKey '\'<CR>
+nnoremap <silent> <leader> :WhichKey '<SPACE>'<CR>
 
 " coc
 nmap <silent> <leader>gd <Plug>(coc-definition)
