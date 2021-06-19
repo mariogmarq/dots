@@ -129,6 +129,8 @@ eval "$(starship init bash)"
 
 export PATH=/home/mario/.local/share/gem/ruby/2.7.0/bin:$PATH
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
+export JAVA_HOME=~/jdk1.8.0_111/bin
+export JDK_HOME=~/jdk1.8.0_111
 
 # Stuff for ssg5
 alias generate='rm dst/.files && ssg5 src dst "mariogmarq website"  "https://mariogmarq.github.io"'
