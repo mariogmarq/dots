@@ -1,4 +1,4 @@
 # My dotfiles
 
 Not the best but is mine
-[screenshot](screenshot.png)
+[screenshot](https://raw.githubusercontent.com/mariogmarq/dots/master/screenshot.png)
