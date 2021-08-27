@@ -1,0 +1,46 @@
+# Colors (Horizon Dark)
+colors:
+  # Primary colors
+  primary:
+    background: '#F0E6DB'
+    foreground: '0x16161c'
+
+  # Normal colors
+  normal:
+    black: '0x16161c'
+    red: '#E95379'
+    green: '#1EB980'
+    yellow: '0xfab795'
+    blue: '#1EAEAE'
+    magenta: '#8931B9'
+    cyan: '0x59e1e3'
+    white: '0xd5d8da'
+
+  # Bright colors
+  bright:
+    black: '0x5b5858'
+    red: '0xec6a88'
+    green: '0x3fdaa4'
+    yellow: '0xfbc3a7'
+    blue: '0x3fc4de'
+    magenta: '#B877DB'
+    cyan: '0x6be4e6'
+    white: '0xd5d8da'
+font:
+  normal:
+    family: CozetteVector
+    style: Regular
+
+  bold:
+    family: CozetteVector
+    style: Bold
+
+  italic:
+    family: CozetteVector
+    style: Italic
+
+  bold_italic:
+    family: CozetteVector
+    style: Bold Italic
+
+  size: 9

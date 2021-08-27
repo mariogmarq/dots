@@ -1,0 +1,61 @@
+* {
+  font-family: "cozette";
+  border-radius: 0px;
+}
+
+#workspaces button {
+  padding: 0 4px;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+}
+
+#workspaces button.focused {
+  border-bottom: 2px solid #E95678;
+}
+
+#window,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor,
+#language,
+#custom-arch,
+#custom-disturb_on,
+#custom-disturb_off,
+#custom-mic,
+#mpd {
+  padding: 0 8px;
+  margin: 0;
+}
+
+#idle_inhibitor {
+  border-bottom: 2px solid #cc241d;
+}
+
+#idle_inhibitor.activated {
+  background-color: #E95678;
+  color: white;
+}
+
+#network {
+  border-bottom: 2px solid #25B2BC;
+}
+
+#pulseaudio {
+  border-bottom: 2px solid #F09383;
+}
+
+#mpd {
+  background-color: #B877DB;
+}
+
+#mpd.playing {
+  background-color: #27D796;
+}
