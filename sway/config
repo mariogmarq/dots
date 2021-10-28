@@ -221,5 +221,11 @@ default_border none
 default_floating_border none
 
 bindsym $mod+Shift+S exec grimshot save screen
+bindsym $mod+Shift+F exec firefox
+
+# volume
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 1 toogle
 
 include /etc/sway/config.d/*
